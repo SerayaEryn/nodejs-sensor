@@ -19,9 +19,9 @@ describe('metrics.dependencies', function() {
     dependencies.activate();
 
     setTimeout(function() {
-      // testing against Mocha dependencies
-      expect(dependencies.currentPayload.mkdirp).to.equal('0.5.0');
-      expect(dependencies.currentPayload.glob).to.equal('3.2.3');
+      // testing against Mocha dependencies since Mocha is the main module right now
+      expect(dependencies.currentPayload.debug).to.equal('3.1.0');
+      expect(dependencies.currentPayload['supports-color']).to.equal('5.4.0');
       done();
     }, 500);
   });
